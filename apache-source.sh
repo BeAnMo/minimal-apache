@@ -2,6 +2,11 @@
 
 # RUN WITH SUDO, NO WAIT DON'T
 
+# cannot configure/build Apache without these
+printf '\nDownloading needed libraries\n'
+sudo apt-get install libpcre3 libpcre3-dev libexpat1-dev gcc build-essential
+
+
 printf '\nDownloading Apache Portable Runtime\n'
 # apr
 wget http://www-us.apache.org/dist//apr/apr-1.6.2.tar.bz2
@@ -32,5 +37,4 @@ wget http://www-us.apache.org/dist/httpd/httpd-2.4.26.tar.bz2.sha1
 printf '\nUncompressing server tarball\n'
 tar -xvjf httpd-2.4.26.tar.bz2
 
-printf '\nDownloading needed libraries\n'
-sudo apt-get install libpcre3 libpcre3-dev libexpat1-dev gcc build-essential
+
