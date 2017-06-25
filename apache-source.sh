@@ -27,6 +27,7 @@
 # remember to 'f'
 
 # cannot configure/build Apache without these
+# may also need to install 'gcc-multilib' to ensure Apache will build on 64bit system
 printf '\nDownloading needed libraries\n'
 sudo apt-get install libpcre3 libpcre3-dev libexpat1-dev gcc build-essential
 
